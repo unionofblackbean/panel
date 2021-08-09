@@ -5,6 +5,8 @@
 </template>
 
 <style lang="scss">
+@import "styles/styles";
+
 body {
   margin: 0;
 }
