@@ -2,7 +2,7 @@ import Vue from "vue";
 import App from "@/App";
 import router from "@/router";
 import i18n from "./i18n";
-import "./plugins/element.js";
+import "./element";
 
 Vue.config.productionTip = false;
 

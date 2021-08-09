@@ -1,7 +1,18 @@
 import Vue from "vue";
 import VueI18n from "vue-i18n";
+import enLocale from "element-ui/lib/locale/lang/en";
+import zhHansLocale from "element-ui/lib/locale/lang/zh-CN";
+import zhHantLocale from "element-ui/lib/locale/lang/zh-TW";
 
 Vue.use(VueI18n);
+
+function assignElementLocales(messages) {
+  Object.assign(messages["en"], enLocale);
+  Object.assign(messages["zh-hans"], zhHansLocale);
+  Object.assign(messages["zh-hant"], zhHantLocale);
+
+  return messages;
+}
 
 function loadLocaleMessages() {
   const locales = require.context(
@@ -23,5 +34,5 @@ function loadLocaleMessages() {
 export default new VueI18n({
   locale: process.env.VUE_APP_I18N_LOCALE || "en",
   fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || "en",
-  messages: loadLocaleMessages(),
+  messages: assignElementLocales(loadLocaleMessages()),
 });
