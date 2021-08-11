@@ -13,6 +13,8 @@ const initLocaleMixin = {
     } else {
       localStorage.locale = this.$i18n.locale;
     }
+
+    document.documentElement.lang = localStorage.locale;
   },
 };
 
