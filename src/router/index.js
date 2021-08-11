@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "@/views/Home";
+import Login from "@/views/Login";
 import NotFound from "@/views/NotFound";
 
 Vue.use(VueRouter);
@@ -8,7 +8,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    component: Home,
+    redirect: "/login",
+  },
+  {
+    path: "/login",
+    component: Login,
   },
   {
     path: "*",
