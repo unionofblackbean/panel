@@ -299,7 +299,7 @@ export default {
         this.shapesY = true
         this.lineWidths = true
         this.fillColors = true
-      } else { this.$message('暂不支持自助添加，请联系管理手动添加') }
+      } else { this.$message('暂不支持自助添加，请联系管理手动添加!') }
     },
     InitData() {
       this.$axios
